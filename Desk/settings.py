@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.flatpages',
     'django.contrib.sites',
+    'bootstrap4',
     'portal',
     'accounts',
     'allauth',
