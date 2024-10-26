@@ -2,3 +2,5 @@ django
 celery
 redis
 django-allauth
+django-bootstrap4
+django-ckeditor

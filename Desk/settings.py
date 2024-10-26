@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'portal',
     'accounts',
     'allauth',
+    'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.yandex',
     'ckeditor',
@@ -115,6 +116,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
+
 ]
 
 
@@ -155,6 +158,8 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+ACCOUNT_FORMS = {'signup': 'accounts.forms.CustomSignupForm'}
 
 WSGI_APPLICATION = 'Desk.wsgi.application'
 
